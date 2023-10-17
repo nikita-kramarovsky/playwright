@@ -171,7 +171,7 @@ export abstract class BrowserType extends SdkObject {
 
     const extensionPath = path.join(__dirname, 'chromium-extension');
     browserArguments.push(
-        // `--disable-extensions-except=${extensionPath}`,
+        `--disable-extensions-except=${extensionPath}`,
         `--load-extension=${extensionPath}`,
     );
 
