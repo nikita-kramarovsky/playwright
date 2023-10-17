@@ -31,7 +31,7 @@ export const chromiumSwitches = [
   '--no-default-browser-check',
   '--disable-default-apps',
   '--disable-dev-shm-usage',
-  '--disable-extensions',
+  // '--disable-extensions',
   // AvoidUnnecessaryBeforeUnloadCheckSync - https://github.com/microsoft/playwright/issues/14047
   // Translate - https://github.com/microsoft/playwright/issues/16126
   '--disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate',

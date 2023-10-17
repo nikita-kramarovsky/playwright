@@ -343,6 +343,11 @@ copyFiles.push({
   from: 'packages/playwright-core/src',
   to: 'packages/playwright-core/lib',
 });
+copyFiles.push({
+  files: 'packages/playwright-core/src/server/chromium-extension/images/*.png',
+  from: 'packages/playwright-core/src',
+  to: 'packages/playwright-core/lib',
+});
 
 // Babel doesn't touch JS files, so copy them manually.
 // For example: diff_match_patch.js

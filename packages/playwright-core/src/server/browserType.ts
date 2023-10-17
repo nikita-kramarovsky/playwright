@@ -169,6 +169,12 @@ export abstract class BrowserType extends SdkObject {
     else
       browserArguments.push(...this._defaultArgs(options, isPersistent, userDataDir));
 
+    const extensionPath = path.join(__dirname, 'chromium-extension');
+    browserArguments.push(
+        // `--disable-extensions-except=${extensionPath}`,
+        `--load-extension=${extensionPath}`,
+    );
+
     let executable: string;
     if (executablePath) {
       if (!(await existsAsync(executablePath)))
